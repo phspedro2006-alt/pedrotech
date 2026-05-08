@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)file:///D:/LPG/PedroTech/index.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>index.html</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            color:white;
+            background:#18a33d;
+            overflow-x:hidden;
+        }
+
+        .pagina{
+            min-height:100vh;
+            animation:fade 0.5s;
+        }
+
+        .oculta{
+            display:none;
+        }
+
+        @keyframes fade{
+
+            from{
+                opacity:0;
+                transform:translateY(20px);
+            }
+
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+
+        }
+
+        header{
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+            padding:20px 8%;
+
+            background:white;
+            color:black;
+
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+
+        }
+
+        .logo{
+            font-size:28px;
+            font-weight:bold;
+            color:#18a33d;
+        }
+
+        nav a{
+
+            text-decoration:none;
+            color:black;
+
+            margin-left:25px;
+
+            font-weight:bold;
+
+            cursor:pointer;
+
+            transition:0.3s;
+
+        }
+
+        nav a:hover{
+            color:#18a33d;
+        }
+
+        .hero{
+
+            min-height:90vh;
+
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+
+            padding:0 8%;
+
+            background:#18a33d;
+
+            flex-wrap:wrap;
+
+        }
+
+        .texto{
+            width:45%;
+        }
+
+        .texto h1{
+
+            font-size:80px;
+
+            line-height:1.1;
+
+            margin-bottom:25px;
+
+        }
+
+        .texto p{
+
+            font-size:28px;
+
+            margin-bottom:35px;
+
+            line-height:1.5;
+
+        }
+
+        .btn{
+
+            background:white;
+            color:#18a33d;
+
+            font-size:22px;
+
+            padding:20px 40px;
+
+            border:none;
+            border-radius:12px;
+
+            font-weight:bold;
+
+            cursor:pointer;
+
+            transition:0.3s;
+
+            box-shadow:0 10px 25px rgba(0,0,0,0.2);
+
+        }
+
+        .btn:hover{
+
+            transform:translateY(-5px) scale(1.05);
+
+            background:#111;
+
+            color:white;
+
+            box-shadow:0 15px 35px rgba(0,0,0,0.3);
+
+        }
+
+        .btn:active{
+            transform:scale(0.95);
+        }
+
+        .imagem{
+
+            width:45%;
+
+            position:relative;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+        }
+
+        .notebook{
+
+            width:520px;
+
+            position:relative;
+
+            top:-80px;
+
+            animation:flutuar 3s ease-in-out infinite;
+
+        }
+
+        @keyframes flutuar{
+
+            0%{
+                transform:translateY(0);
+            }
+
+            50%{
+                transform:translateY(-15px);
+            }
+
+            100%{
+                transform:translateY(0);
+            }
+
+        }
+
+        .foto{
+
+            width:220px;
+            height:320px;
+
+            object-fit:cover;
+
+            border-radius:20px;
+
+            position:absolute;
+
+            top:10px;
+            left:150px;
+
+            border:5px solid white;
+
+            box-shadow:0 10px 30px rgba(0,0,0,0.3);
+
+        }
+
+        @media(max-width:900px){
+
+            .hero{
+                flex-direction:column;
+                justify-content:center;
+                text-align:center;
+                padding:50px 5%;
+            }
+
+            .texto{
+                width:100%;
+            }
+
+            .imagem{
+                width:100%;
+                margin-top:50px;
+            }
+
+            .texto h1{
+                font-size:50px;
+            }
+
+            .texto p{
+                font-size:22px;
+            }
+
+            .notebook{
+                width:100%;
+                max-width:420px;
+                top:0;
+            }
+
+            .foto{
+                width:180px;
+                height:260px;
+                left:50%;
+                transform:translateX(-50%);
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div id="pagina1" class="pagina">
+
+    <header>
+
+        <div class="logo">⚡ Paulo Henrique</div>
+
+        <nav>
+
+            <a onclick="abrirPagina1()">Início</a>
+            <a onclick="abrirPagina2()">Produtos</a>
+            <a onclick="abrirPagina3()">Projetos</a>
+            <a onclick="abrirPagina4()">Contato</a>
+
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <div class="texto">
+
+            <h1>
+                Sinta-se organizado
+                sem esforço
+            </h1>
+
+            <p>
+                Tecnologia, programação
+                e inovação profissional.
+            </p>
+
+            <button class="btn" onclick="comecar()">
+                🚀 Orçamento
+            </button>
+
+        </div>
+
+        <div class="imagem">
+
+            <img src="file:///D:/LPG/PedroTech/notebook.webp" class="notebook">
+
+            <img src="./index_files/pedro.jpg" class="foto">
+
+        </div>
+
+    </section>
+
+</div>
+
+<div id="pagina2" class="pagina oculta">
+
+    <header>
+
+        <div class="logo">⚙️ Gerenciar</div>
+
+        <nav>
+
+            <a onclick="abrirPagina1()">Início</a>
+            <a onclick="abrirPagina2()">Produtos</a>
+            <a onclick="abrirPagina3()">Projetos</a>
+            <a onclick="abrirPagina4()">Contato</a>
+
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <div class="texto">
+
+            <h1>Painel Administrativo</h1>
+
+            <p>
+                Controle de usuários,
+                relatórios e sistemas.
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+<div id="pagina3" class="pagina oculta">
+
+    <header>
+
+        <div class="logo">💻 Projetos</div>
+
+        <nav>
+
+            <a onclick="abrirPagina1()">Início</a>
+            <a onclick="abrirPagina2()">Produtos</a>
+            <a onclick="abrirPagina3()">Projetos</a>
+            <a onclick="abrirPagina4()">Contato</a>
+
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <div class="texto">
+
+            <h1>Meus Projetos</h1>
+
+            <p>
+                HTML • Java • Banco de Dados
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+<div id="pagina4" class="pagina oculta">
+
+    <header>
+
+        <div class="logo">📞 Contato</div>
+
+        <nav>
+
+            <a onclick="abrirPagina1()">Início</a>
+            <a onclick="abrirPagina2()">Produtos</a>
+            <a onclick="abrirPagina3()">Projetos</a>
+            <a onclick="abrirPagina4()">Contato</a>
+
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <div class="texto">
+
+            <h1>Entre em contato</h1>
+
+            <p>
+                WhatsApp • Email • Rio de Janeiro
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script>
+function comecar(){
+
+    abrirPagina2();
+
+}
+
+    function esconderTodas(){
+
+        document.getElementById("pagina1").style.display = "none";
+        document.getElementById("pagina2").style.display = "none";
+        document.getElementById("pagina3").style.display = "none";
+        document.getElementById("pagina4").style.display = "none";
+
+    }
+
+    function abrirPagina1(){
+
+        esconderTodas();
+
+        document.getElementById("pagina1").style.display = "block";
+
+    }
+
+    function abrirPagina2(){
+
+        esconderTodas();
+
+        document.getElementById("pagina2").style.display = "block";
+
+    }
+
+    function abrirPagina3(){
+
+        esconderTodas();
+
+        document.getElementById("pagina3").style.display = "block";
+
+    }
+
+    function abrirPagina4(){
+
+        esconderTodas();
+
+        document.getElementById("pagina4").style.display = "block";
+
+    }
+
+</script>
+
+
+</body></html>
